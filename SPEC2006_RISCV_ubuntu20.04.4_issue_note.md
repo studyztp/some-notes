@@ -15,6 +15,10 @@ SUPER thankful to all the people who documented their issues and solutions durin
 
 - https://sjp38.github.io/post/spec_cpu2006_install/
 
+- https://github.com/ccelio/Speckle
+
+- https://groups.google.com/a/groups.riscv.org/g/sw-dev/c/Pr60YZFQXzY
+
 
 
 # Issues
