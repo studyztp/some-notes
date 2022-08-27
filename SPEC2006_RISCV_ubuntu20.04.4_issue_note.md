@@ -181,6 +181,17 @@ Load address: 0x84000000
 Loading: *
 TFTP error: 'Access violation' (2)
 ```
+or this:
+```
+qemu-system-riscv64: Some ROM regions are overlapping
+These ROM regions might have been loaded by direct user request or by default.
+They could be BIOS/firmware images, a guest kernel, initrd or some other file loaded into guest memory.
+Check whether you intended to load all this guest code, and whether it has been built to load to the correct addresses.
+
+The following two regions overlap (in the memory address space):
+  /platform/generic/firmware/fw_jump.elf ELF program header segment 1 (addresses 0x0000000080000000 - 0x0000000080045ad0)
+  u-boot/u-boot ELF program header segment 1 (addresses 0x0000000080000000 – 0x00000000800a7a10)
+``` 
 
 ## Make sure to use the right riscv tool when using [Speckle](https://github.com/ccelio/Speckle)
 The riscv.config uses riscv64 newlib tools. Check ```/usr/bin/``` before trying ```./gen_binaries.sh```.
