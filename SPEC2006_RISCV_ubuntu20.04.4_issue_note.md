@@ -36,7 +36,8 @@ SUPER thankful to all the people who documented their issues and solutions durin
 
 The solution to this was downloading the latest config.sub and config.guess from https://ftp.gnu.org/
 Below are the links to the config files:
-- http://git.savannah.gnu.org/gitweb/p=config.git;a=blob_plain;f=config.guess;hb=HEAD
+- http://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.guess;hb=HEAD
+
 - http://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.sub;hb=HEAD
 
 (solution from [GQBBBB](https://github.com/GQBBBB/GQBBBB.github.io/issues/10))
