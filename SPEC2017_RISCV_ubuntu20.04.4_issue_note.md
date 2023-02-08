@@ -4,7 +4,7 @@ I'll note down the issues I met during building and running SPEC2017 in RISC-V U
 
 - https://github.com/donggyukim/Speckle-2017
 - https://zhuanlan.zhihu.com/p/425497845
-
+- https://gitee.com/lvxiaoqian/memo/blob/master/%E5%9C%A8unmatched%20Ubuntu21.04%E4%B8%8A%E8%B7%91cpu2017.md
 
 # SPEC2017 system requirement
 
@@ -223,4 +223,7 @@ make: *** [Makefile:1016: check-recursive] Error 1
 !!!!! buildtools killed
 ```
 
-TBC
+In `[tools/src/specsum/configure]`, </b>
+find `USE_POSIX_THREADS` and change it from </b>
+`#define USE_POSIX_THREADS 1` to </b>
+`#define USE_POSIX_THREADS 0`.
