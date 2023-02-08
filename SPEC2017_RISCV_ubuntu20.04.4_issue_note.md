@@ -227,3 +227,5 @@ In `[tools/src/specsum/configure]`, </b>
 find `USE_POSIX_THREADS` and change it from </b>
 `#define USE_POSIX_THREADS 1` to </b>
 `#define USE_POSIX_THREADS 0`.
+
+(solution from [吕晓倩](https://gitee.com/lvxiaoqian/memo/blob/master/%E5%9C%A8unmatched%20Ubuntu21.04%E4%B8%8A%E8%B7%91cpu2017.md))
