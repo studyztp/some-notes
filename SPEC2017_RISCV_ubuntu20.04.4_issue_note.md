@@ -14,6 +14,9 @@ Disk: 10 GB minimum but only run fully with 250 GB
 
 Memory: 16 GB
 
+# Offical RISC-V config
+
+It can be obtained here: https://www.spec.org/cpu2017/Docs/Example-gcc-linux-riscv.cfg
 
 # ISSUE
 
