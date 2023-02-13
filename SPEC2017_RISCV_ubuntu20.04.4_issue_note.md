@@ -72,8 +72,6 @@ collect2: error: ld returned 1 exit status
 ```
 
 In `[tools/src/make-4.2.1/glob/glob.c]`, <br>
-find ```#if _GNU_GLOB_INTERFACE_VERSION == GLOB_INTERFACE_VERSION``` <br>
-change it to ```#if _GNU_GLOB_INTERFACE_VERSION >=GLOB_INTERFACE_VERSION```<br>
 then find ```#if !defined __alloca && !defined GNU_LIBRARY``` <br>
 change it to ```#if !defined __alloca && defined GNU_LIBRARY```
 
@@ -113,7 +111,13 @@ above it.
 
 ### tools/src/make-4.2.1/tests/scripts/functions/wildcard test failed
 
-I edited the wildcard script to make it `return -1` before running any tests in the test suit.
+~~I edited the wildcard script to make it `return -1` before running any tests in the test suit.~~
+
+This was caused by changing <br>
+```#if _GNU_GLOB_INTERFACE_VERSION == GLOB_INTERFACE_VERSION``` <br>
+to ```#if _GNU_GLOB_INTERFACE_VERSION >=GLOB_INTERFACE_VERSION```<br>
+in `[tools/src/make-4.2.1/glob/glob.c]`.
+The two failed tests in this test suits indicate the program is having SEG FAULT 11.
 
 
 
