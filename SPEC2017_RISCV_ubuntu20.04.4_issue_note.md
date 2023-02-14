@@ -18,6 +18,14 @@ Memory: 16 GB
 
 It can be obtained here: https://www.spec.org/cpu2017/Docs/Example-gcc-linux-riscv.cfg
 
+# Random Tips
+
+Make sure to use all threads in the system to build the tools and the benchmarks, i.e. setting up "MAKEFLAGS" and "build_ncpus". The amount of time it took me to build the tools and benchmarks for SPEC2017 is significantly more than for SPEC2006. 
+
+In 2022, SPEC releases version 1.1.9 for SPEC2017 which includes a tool for RISC-V 64-bit Linux systems ([line](https://www.spec.org/cpu2017/Docs/changes.html#v119)). Since I can not run `runcpu` command before installing SPEC2017, I ran the `runcpu --update` command on my x86-64 system and obtained the tool `linux-riscv64`. However, when I used it with the `install.sh` on my RISC-V disk, it couldn't detect the tool. If one can manage to use this tool to install SPEC2017, I think it might be better to do so than going though the time to build the tools. 
+
+If the GCC version on the RISC-V machine is lower than 10, then the line `%define GCCge10 ` on the RISC-V config script must be removed.
+
 # ISSUE
 
 ## During buildtool
