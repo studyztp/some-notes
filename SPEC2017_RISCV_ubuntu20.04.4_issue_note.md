@@ -10,7 +10,7 @@ I'll note down the issues I met during building and running SPEC2017 in RISC-V U
 
 https://www.spec.org/cpu2017/Docs/system-requirements.html#disk
 
-Disk: 10 GB minimum but only run fully with 250 GB
+Disk: 10 GB minimum but recommend 250 GB
 
 Memory: 16 GB
 
