@@ -85,6 +85,29 @@ change it to ```#if !defined __alloca && defined GNU_LIBRARY```
 
 (solution from [RyoTTa](https://ryotta-205.tistory.com/48))
 
+### Failed to buld miniperl
+
+```
+./miniperl -w -Ilib -Idist/Exporter/lib -MExporter -e '<?>' || sh -c 'echo >&2 Failed to build miniperl.  Please run make minitest; exit 1'
+Attempt to free unreferenced scalar: SV 0x557bafe5f570.
+Segmentation fault (core dumped)
+Failed to build miniperl. Please run make minitest
+make: *** [makefile:384: lib/buildcustomize.pl] Error 1
++ testordie error building Perl
++ test 2 -ne 0
++ echo !!! error building Perl
+!!! error building Perl
++ [ -z  ]
++ kill -TERM 2711317
++ exit 1
+!!!!! buildtools killed
+```
+
+This might caused by a bug in build perl with gcc10.
+In `[tools/src/perl-5.24.0/Configure]` and `[tools/src/perl-5.24.0/cflags.SH]`, find all `case "$gccversion"` and change the `1*` to `1.*` if it is finding `1*`.
+
+(solution from [冬天已往](https://zhuanlan.zhihu.com/p/425497845))
+
 
 ### Can't locate test_driver.pl in @INC 
 
