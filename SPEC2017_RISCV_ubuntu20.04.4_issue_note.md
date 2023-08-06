@@ -26,6 +26,11 @@ In 2022, SPEC releases version 1.1.9 for SPEC2017 which includes a tool for RISC
 
 If the GCC version on the RISC-V machine is lower than 10, then the line `%define GCCge10 ` on the RISC-V config script must be removed.
 
+## update in 2023
+
+I was able to update SPEC2017 in x86 host and use the RISCV tool package to install and build SPEC2017 in RISCV enviornment.
+It's much more convinence than going through the tool building process.
+
 # ISSUE
 
 ## During buildtool
