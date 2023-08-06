@@ -104,7 +104,7 @@ make: *** [makefile:384: lib/buildcustomize.pl] Error 1
 ```
 
 This might caused by a bug in build perl with gcc10.
-In `[tools/src/perl-5.24.0/Configure]` and `[tools/src/perl-5.24.0/cflags.SH]`, find all `case "$gccversion"` and change the `1*` to `1.*` if it is finding `1*`.
+In `[tools/src/perl-5.24.0/Configure]` and `[tools/src/perl-5.24.0/cflags.SH]`, find all `case "$gccversion" in` and change the `1*` to `1.*` if it is finding `1*`.
 
 (solution from [冬天已往](https://zhuanlan.zhihu.com/p/425497845))
 
